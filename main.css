@@ -1,0 +1,162 @@
+:root {
+  --very-dark-blue: hsl(216, 12%, 8%);
+  --white: hsl(0, 0%, 100%);
+  --orange: hsl(25, 97%, 53%);
+  --light-gray: hsl(217, 12%, 63%);
+  --medium-grey: hwb(216 49% 40%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --dark-late-gray: rgb(33, 40, 48);
+  --dark-blue-alt: rgb(23, 30, 40);
+  --orange-greyed: hsla(25, 76%, 57%, 0.955);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+span,
+button {
+  display: block;
+  font-family: inherit;
+}
+body {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--very-dark-blue);
+  color: var(--white);
+  font-family: "Overpass", sans-serif;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 355px;
+  background-color: var(--dark-blue);
+  padding: 1.2rem;
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+  padding-right: 2rem;
+  border-radius: 1.4rem;
+  background: linear-gradient(
+    to bottom,
+    var(--dark-late-gray),
+    var(--dark-blue-alt)
+  );
+}
+.submit-card {
+}
+.card .star-container {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--dark-blue);
+  display: grid;
+  place-content: center;
+}
+
+.card h2 {
+  margin-top: 1rem;
+  font-weight: 400;
+}
+
+.card p {
+  color: var(--light-gray);
+  line-height: 1.6;
+  margin: 0.625rem 0;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.card .rating-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+.card .rating-container span {
+  width: 45px;
+  height: 45px;
+  background-color: var(--dark-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--light-gray);
+  transition: 0.3s;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.card .rating-container span:hover {
+  color: var(--white);
+  background-color: var(--orange);
+}
+.card .rating-container span:active {
+  opacity: 0.8;
+  color: var(--white);
+  background-color: var(--orange);
+}
+
+.card .rating-container span.focused {
+  background-color: var(--light-gray);
+  color: var(--white);
+}
+
+.card .submit {
+  width: 100%;
+  cursor: pointer;
+  border-radius: 25px;
+  background-color: var(--orange);
+  border: none;
+  padding: 0.7rem;
+  color: var(--white);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.3s;
+  margin-top: 1.4rem;
+}
+
+.card .submit:hover {
+  background-color: var(--white);
+  color: var(--orange);
+}
+
+.card .submit:active {
+  background-color: var(--white);
+  color: var(--orange);
+  opacity: 0.8;
+}
+
+.thanks-card {
+  display: none;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.thanks-card .result {
+  font-size: 14px;
+  background-color: var(--dark-blue);
+  padding: 0.3rem 0.8rem;
+  border-radius: 25px;
+  color: var(--orange-greyed);
+  font-weight: 400;
+}
+.thanks-card .result span {
+  display: inline-block;
+}
+
+.thanks-card p {
+  text-align: center;
+}
+.attribution {
+  position: absolute;
+  bottom: 0;
+}
